@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Plan Builder</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <div class="logos">
+                <img src="https://news.sfu-kras.ru/files/images/1280px-vtb_logo_2018.svg_.png" alt="VTB" class="logo vtb">
+                <h1>Media Plan Builder</h1>
+                <img src="https://static.tildacdn.com/tild3038-6237-4636-b839-643662626137/MIG_logo.svg" alt="MIG" class="logo mig">
+            </div>
+            <div class="budget-progress-container">
+                <div class="budget-progress"></div>
+                <div class="budget-text">Бюджет: 0 / 15 000 000 ₽</div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="tasks-section">
+                <div id="tasks-container" class="tab-content active"></div>
+                <div class="task-actions">
+                    <button id="check-task" class="btn-primary">Проверить выполнение</button>
+                    <button id="reset-plan" class="btn-secondary">Очистить медиаплан</button>
+                </div>
+            </div>
+            
+            <div class="workspace">
+                <div class="mediaplan-container">
+                    <div class="mediaplan with-bg-image" id="mediaplan">
+                        <div class="section-header">
+                            <h3>Ваш медиаплан</h3>
+                            <div class="section-actions">
+                                <button id="export-plan" class="btn-icon" title="Экспорт медиаплана"><i class="fas fa-file-export"></i></button>
+                                <button id="import-plan" class="btn-icon" title="Импорт медиаплана"><i class="fas fa-file-import"></i></button>
+                            </div>
+                        </div>
+                        <div class="plan-stats"></div>
+                        <div class="empty-drop">Перетащите площадки сюда</div>
+                    </div>
+                </div>
+                
+                <div class="platforms-container">
+                    <div class="platforms-list" id="platforms-list">
+                        <div class="section-header">
+                            <h3>Доступные площадки</h3>
+                            <div class="search-box">
+                                <input type="text" id="platform-search" placeholder="Поиск...">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                        <div id="platforms-content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="warning-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="warning-text"></p>
+        </div>
+    </div>
+
+    <div id="platform-info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="platform-info-title"></h3>
+            <div id="platform-info-content"></div>
+        </div>
+    </div>
+
+    <div id="stats-info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Объяснение терминов</h3>
+            <div id="stats-info-content">
+                <p><strong>CPM (Cost Per Mille)</strong> - стоимость 1000 показов рекламы. Рассчитывается как (общий бюджет / общие показы) * 1000.</p>
+                <p><strong>CPC (Cost Per Click)</strong> - стоимость одного клика. Рассчитывается как общий бюджет / общее количество кликов.</p>
+                <p><strong>CTR (Click Through Rate)</strong> - отношение числа кликов к показам. Показывает эффективность рекламы.</p>
+                <p><strong>BR (Bounce Rate)</strong> - процент пользователей, покинувших сайт после первого просмотра.</p>
+                <p><strong>Reach</strong> - уникальный охват аудитории, количество уникальных пользователей.</p>
+                <button id="understand-btn" class="btn-primary">Понятно</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
