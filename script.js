@@ -1,4 +1,3 @@
-// Данные площадок с лимитами бюджета и описаниями
 const platforms = [
     { 
         id: 0, 
@@ -142,13 +141,11 @@ const platforms = [
     }
 ];
 
-// Игровые параметры
 const TOTAL_BUDGET = 15000000;
 let selectedPlatforms = [];
 let completedTasks = [];
 let currentTaskIndex = 0;
 
-// Задания
 const tasks = [
     { 
         id: 1,
@@ -194,40 +191,28 @@ const tasks = [
     }
 ];
 
-// Инициализация игры
 function initGame() {
     console.log("Инициализация игры...");
-    
-    // Сброс состояния игры
     resetGameState();
-    
-    // Инициализация модальных окон
     initModals();
-    
-    // Рендер интерфейса
     renderPlatforms();
     renderAllTasks();
     setupDragAndDrop();
     setupEventListeners();
-    
-    // Обновление прогресса бюджета
     updateBudgetProgress();
 }
 
-// Сброс состояния игры
 function resetGameState() {
     selectedPlatforms = [];
     completedTasks = [];
     currentTaskIndex = 0;
 }
 
-// Инициализация модальных окон
 function initModals() {
     const modals = document.querySelectorAll('.modal');
     
     modals.forEach(modal => {
         const span = modal.querySelector('.close');
-        
         span.onclick = function() {
             modal.style.display = "none";
         }
@@ -241,12 +226,10 @@ function initModals() {
         });
     }
     
-    // Обработчик для кнопки "Понятно" в модалке статистики
     document.getElementById('understand-btn').addEventListener('click', function() {
         document.getElementById('stats-info-modal').style.display = 'none';
     });
     
-    // Обработчик кликов по статистике
     document.addEventListener('click', function(e) {
         if (e.target.closest('.plan-stats')) {
             document.getElementById('stats-info-modal').style.display = 'block';
@@ -254,19 +237,12 @@ function initModals() {
     });
 }
 
-// Настройка обработчиков событий
 function setupEventListeners() {
-    // Проверка заданий
     document.getElementById("check-task").addEventListener("click", checkTasks);
-    
-    // Очистка медиаплана
     document.getElementById("reset-plan").addEventListener("click", resetMediaplan);
-    
-    // Поиск площадок
     document.getElementById("platform-search").addEventListener("input", searchPlatforms);
 }
 
-// Поиск площадок
 function searchPlatforms() {
     const searchTerm = document.getElementById("platform-search").value.toLowerCase();
     const platformElements = document.querySelectorAll('#platforms-content .platform');
@@ -277,7 +253,6 @@ function searchPlatforms() {
     });
 }
 
-// Показать информацию о площадке
 function showPlatformInfo(platformId) {
     const platform = platforms.find(p => p.id == platformId);
     if (!platform) return;
@@ -301,7 +276,6 @@ function showPlatformInfo(platformId) {
     document.getElementById("platform-info-modal").style.display = "block";
 }
 
-// Рендер площадок
 function renderPlatforms() {
     const container = document.getElementById("platforms-content");
     container.innerHTML = '';
@@ -324,12 +298,10 @@ function renderPlatforms() {
     });
 }
 
-// Рендер всех заданий
 function renderAllTasks() {
     const container = document.getElementById("tasks-container");
     container.innerHTML = "";
     
-    // Показываем текущие задания
     tasks.forEach((task, index) => {
         if (index <= currentTaskIndex || completedTasks.includes(task.id)) {
             const taskEl = document.createElement("div");
@@ -345,7 +317,6 @@ function renderAllTasks() {
     });
 }
 
-// Настройка Drag-and-Drop
 function setupDragAndDrop() {
     const mediaplan = document.getElementById("mediaplan");
 
@@ -372,25 +343,21 @@ function setupDragAndDrop() {
     mediaplan.addEventListener("drop", (e) => {
         e.preventDefault();
         mediaplan.classList.remove("drop-zone");
-        
         const platformId = e.dataTransfer.getData("text/plain");
         addPlatformToMediaplan(platformId);
     });
 }
 
-// Добавление площадки в медиаплан
 function addPlatformToMediaplan(platformId) {
     const platform = platforms.find(p => p.id == platformId);
     
     if (!platform) return;
     
-    // Проверка, что площадка ещё не добавлена
     if (selectedPlatforms.some(p => p.id == platformId)) {
         showWarning("Эта площадка уже добавлена в медиаплан");
         return;
     }
     
-    // Добавление площадки с бюджетом по умолчанию (10% от лимита, округленное до 50 000)
     const defaultBudget = Math.min(
         Math.max(50000, Math.floor(platform.budgetLimit * 0.1 / 50000) * 50000),
         platform.budgetLimit
@@ -399,9 +366,13 @@ function addPlatformToMediaplan(platformId) {
     const platformCopy = {...platform, budget: defaultBudget};
     selectedPlatforms.push(platformCopy);
     updateMediaplan();
+    
+    const platformElement = document.querySelector(`#platforms-content .platform[data-id="${platformId}"]`);
+    if (platformElement) {
+        platformElement.style.display = 'none';
+    }
 }
 
-// Обновление бюджета площадки
 function updatePlatformBudget(platformId, newBudget) {
     const platform = selectedPlatforms.find(p => p.id == platformId);
     if (!platform) return false;
@@ -428,22 +399,18 @@ function updatePlatformBudget(platformId, newBudget) {
     return true;
 }
 
-// Обновление бюджета через слайдер
 function updatePlatformBudgetSlider(slider) {
     const platformId = parseInt(slider.dataset.id);
     const newBudget = parseInt(slider.value);
-    const roundedBudget = Math.round(newBudget / 50000) * 50000; // Округляем до шага 50 000
+    const roundedBudget = Math.round(newBudget / 50000) * 50000;
     
-    // Обновляем значение в слайдере
     slider.value = roundedBudget;
     
-    // Обновляем отображаемое значение
     const budgetValueElement = slider.parentNode.querySelector('.budget-slider-value span:first-child');
     if (budgetValueElement) {
         budgetValueElement.textContent = roundedBudget.toLocaleString() + ' ₽';
     }
     
-    // Обновляем прогресс-бар
     const platformElement = slider.closest('.platform');
     if (platformElement) {
         const originalPlatform = platforms.find(p => p.id === platformId);
@@ -452,15 +419,13 @@ function updatePlatformBudgetSlider(slider) {
     }
 }
 
-// Окончательное обновление бюджета при отпускании слайдера
 function updatePlatformBudgetOnChange(slider) {
     const platformId = parseInt(slider.dataset.id);
     const newBudget = parseInt(slider.value);
-    const roundedBudget = Math.round(newBudget / 50000) * 50000; // Округляем до шага 50 000
+    const roundedBudget = Math.round(newBudget / 50000) * 50000;
     updatePlatformBudget(platformId, roundedBudget);
 }
 
-// Расчёт статистики
 function calculateStats() {
     if (selectedPlatforms.length === 0) return { 
         totalSpent: 0, 
@@ -504,7 +469,6 @@ function calculateStats() {
     };
 }
 
-// Обновление медиаплана
 function updateMediaplan() {
     const mediaplan = document.getElementById("mediaplan");
     mediaplan.innerHTML = '<div class="section-header"><h3>Ваш медиаплан</h3><div class="section-actions"><button id="export-plan" class="btn-icon" title="Экспорт медиаплана"><i class="fas fa-file-export"></i></button><button id="import-plan" class="btn-icon" title="Импорт медиаплана"><i class="fas fa-file-import"></i></button></div></div><div class="plan-stats"></div>';
@@ -512,6 +476,9 @@ function updateMediaplan() {
     if (selectedPlatforms.length === 0) {
         mediaplan.innerHTML += '<div class="empty-drop">Перетащите площадки сюда</div>';
         resetStats();
+        document.querySelectorAll('#platforms-content .platform').forEach(el => {
+            el.style.display = 'flex';
+        });
         return;
     }
 
@@ -519,16 +486,11 @@ function updateMediaplan() {
     updateStatsDisplay(stats);
     updateBudgetProgress();
 
-    // Отображение площадок
     selectedPlatforms.forEach(platform => {
         const platformEl = document.createElement("div");
         platformEl.className = "platform in-mediaplan";
-        
-        // Расчет % использования бюджета
         const budgetPercentage = Math.min(100, (platform.budget / platform.budgetLimit) * 100);
         platformEl.style.setProperty('--percentage', `${budgetPercentage}%`);
-        
-        // Расчет метрик для площадки
         const impressions = Math.floor((platform.budget / platform.CPM) * 1000);
         const clicks = Math.floor(impressions * (platform.CTR / 100));
         const reach = Math.floor(impressions / platform.frequency);
@@ -560,21 +522,22 @@ function updateMediaplan() {
         mediaplan.appendChild(platformEl);
     });
 
-    // Кнопки удаления
     document.querySelectorAll(".remove-btn").forEach(btn => {
         btn.addEventListener("click", (e) => {
             e.stopPropagation();
             const id = e.target.dataset.id;
             selectedPlatforms = selectedPlatforms.filter(p => p.id != id);
+            const platformElement = document.querySelector(`#platforms-content .platform[data-id="${id}"]`);
+            if (platformElement) {
+                platformElement.style.display = 'flex';
+            }
             updateMediaplan();
         });
     });
     
-    // Обновляем статус заданий
     updateTasksStatus();
 }
 
-// Обновление статуса заданий
 function updateTasksStatus() {
     const stats = calculateStats();
     
@@ -602,7 +565,6 @@ function updateTasksStatus() {
     });
 }
 
-// Обновление статистики
 function updateStatsDisplay(stats) {
     const statsContainer = document.querySelector(".plan-stats");
     if (!statsContainer) return;
@@ -636,7 +598,6 @@ function updateStatsDisplay(stats) {
     `;
 }
 
-// Обновление прогресса бюджета
 function updateBudgetProgress() {
     const stats = calculateStats();
     const progress = (stats.totalSpent / TOTAL_BUDGET) * 100;
@@ -645,7 +606,6 @@ function updateBudgetProgress() {
     document.querySelector('.budget-text').textContent = `Бюджет: ${stats.totalSpent.toLocaleString()} / ${TOTAL_BUDGET.toLocaleString()} ₽`;
 }
 
-// Проверка заданий
 function checkTasks() {
     const stats = calculateStats();
     let anyTaskCompleted = false;
@@ -675,7 +635,6 @@ function checkTasks() {
     return anyTaskCompleted;
 }
 
-// Сброс медиаплана
 function resetMediaplan() {
     if (confirm("Вы уверены, что хотите очистить медиаплан?")) {
         selectedPlatforms = [];
@@ -686,7 +645,6 @@ function resetMediaplan() {
     }
 }
 
-// Показать уведомление
 function showNotification(message, type) {
     const notification = document.createElement("div");
     notification.className = `notification ${type}`;
@@ -699,14 +657,12 @@ function showNotification(message, type) {
     }, 3000);
 }
 
-// Показать предупреждение
 function showWarning(message) {
     const modal = document.getElementById("warning-modal");
     document.getElementById("warning-text").textContent = message;
     modal.style.display = "block";
 }
 
-// Сброс статистики
 function resetStats() {
     const statsContainer = document.querySelector(".plan-stats");
     if (statsContainer) {
@@ -730,10 +686,8 @@ function resetStats() {
     }
 }
 
-// Запуск игры после загрузки DOM
 document.addEventListener('DOMContentLoaded', initGame);
 
-// Сделаем функции доступными глобально для HTML-атрибутов
 window.showPlatformInfo = showPlatformInfo;
 window.updatePlatformBudgetSlider = updatePlatformBudgetSlider;
 window.updatePlatformBudgetOnChange = updatePlatformBudgetOnChange;
