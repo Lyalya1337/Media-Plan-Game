@@ -1,0 +1,644 @@
+/* Базовые стили */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Кнопки */
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: var(--light-color);
+    color: var(--dark-color);
+    border: 1px solid #ddd;
+}
+
+.btn-secondary:hover {
+    background: #dfe6e9;
+    transform: translateY(-2px);
+}
+
+.btn-icon {
+    background: transparent;
+    border: none;
+    color: var(--dark-color);
+    font-size: 16px;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-icon:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Контейнер игры */
+.game-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+/* Шапка */
+.game-header {
+    background: linear-gradient(90deg, #0047BB 0%, #00D1FF 100%);
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    color: white;
+    position: relative;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+.logo.vtb {
+    height: 50px;
+}
+
+.logo.mig {
+    height: 45px;
+}
+
+.game-header h1 {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Прогресс бар бюджета */
+.budget-progress-container {
+    height: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.budget-progress {
+    height: 100%;
+    background: white;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+    width: 0;
+}
+
+.budget-text {
+    position: absolute;
+    right: 0;
+    top: -25px;
+    font-size: 12px;
+    color: white;
+}
+
+/* Основное содержимое */
+.main-content {
+    display: flex;
+    gap: 20px;
+}
+
+/* Секция заданий */
+.tasks-section {
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tasks-tabs {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    font-weight: 600;
+    color: #7f8c8d;
+    transition: all 0.3s;
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.tab-content {
+    display: none;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.task-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Рабочая область */
+.workspace {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.section-header h3 {
+    margin: 0;
+    color: var(--dark-color);
+    white-space: nowrap;
+}
+
+.section-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.search-box {
+    position: relative;
+    width: 120px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 5px 25px 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.search-box i {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #95a5a6;
+    font-size: 12px;
+}
+
+/* Контейнеры для медиаплана и площадок */
+.mediaplan-container {
+    flex: 2;
+}
+
+.platforms-container {
+    flex: 1;
+}
+
+/* Задания */
+#tasks-container, #completed-tasks {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    min-height: 150px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.task-item:hover {
+    transform: translateX(5px);
+}
+
+.task-item.completed {
+    background: #f0fff4;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.task-item.completed .task-status::after {
+    content: "✓";
+    color: var(--secondary-color);
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.task-item i {
+    color: var(--primary-color);
+}
+
+.task-item .task-text {
+    flex: 1;
+}
+
+/* Рабочая область */
+.platforms-list, .mediaplan {
+    border: 2px dashed #bdc3c7;
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+#platforms-content {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.mediaplan {
+    min-height: 400px;
+    background: #f9f9f9;
+}
+
+.platforms-list {
+    background: #f0f0f0;
+}
+
+/* Площадки */
+.platform {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    cursor: grab;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.platform::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: var(--percentage, 0);
+    background-color: #e1f5fe;
+    z-index: 0;
+    transition: width 0.3s;
+}
+
+.platform > * {
+    position: relative;
+    z-index: 1;
+}
+
+.platform:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.platform.invalid {
+    background: #ffebee;
+    border-color: var(--danger-color);
+    animation: shake 0.5s;
+}
+
+.platform-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.platform-content {
+    flex: 1;
+}
+
+.platform small {
+    display: block;
+    color: #7f8c8d;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+.platform .remove-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: var(--danger-color);
+    color: white;
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.platform:hover .remove-btn {
+    opacity: 1;
+}
+
+.platform-info-btn {
+    margin-left: auto;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* Слайдер бюджета */
+.budget-slider-container {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.budget-slider {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.budget-slider-value {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #7f8c8d;
+}
+
+/* Медиаплан */
+.empty-drop {
+    color: #95a5a6;
+    text-align: center;
+    padding: 50px 0;
+    font-size: 16px;
+}
+
+/* Статистика */
+.plan-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card i {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #7f8c8d;
+    text-transform: uppercase;
+}
+
+/* Модальные окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(3px);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 25px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    animation: modalFadeIn 0.3s;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #95a5a6;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: var(--dark-color);
+}
+
+/* Уведомления */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    color: white;
+    box-shadow: var(--shadow);
+    z-index: 1001;
+    animation: slideIn 0.3s;
+}
+
+.notification.success {
+    background: var(--secondary-color);
+}
+
+.notification.error {
+    background: var(--danger-color);
+}
+
+.notification.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+/* Анимации */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .tasks-section {
+        flex: 0 0 auto;
+    }
+    
+    .workspace {
+        flex-direction: column-reverse;
+    }
+    
+    .mediaplan-container, .platforms-container {
+        flex: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .game-container {
+        padding: 15px;
+    }
+    
+    .plan-stats {
+        flex-direction: column;
+    }
+    
+    .stat-card {
+        min-width: 100%;
+    }
+    
+    .modal-content {
+        width: 90%;
+        margin: 20% auto;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .search-box {
+        width: 100%;
+    }
+}
+
+/* Новые стили для компактных площадок в медиаплане */
+.platform.in-mediaplan {
+    padding: 10px;
+}
+
+.platform.in-mediaplan .platform-header {
+    margin-bottom: 5px;
+}
+
+.platform.in-mediaplan .platform-stats {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.platform.in-mediaplan .budget-slider-container {
+    margin-top: 5px;
+}
+
+.platform.in-mediaplan small {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
