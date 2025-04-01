@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Plan Builder</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="tutorial-modal" class="modal">
+        <div class="modal-content">
+            <h3>Добро пожаловать в Media Plan Builder!</h3>
+            <div id="tutorial-content">
+                <div class="tutorial-step active" data-step="1">
+                    <p>Ваша задача - создать медиаплан для рекламной кампании, перетаскивая площадки в правую часть экрана.</p>
+                </div>
+                <div class="tutorial-step" data-step="2">
+                    <p>Настраивайте бюджет для каждой площадки с помощью ползунка. Не превышайте общий бюджет!</p>
+                </div>
+                <div class="tutorial-step" data-step="3">
+                    <p>Следите за выполнением задач в левой части. Нажимайте "Отправить на согласование", чтобы проверить прогресс.</p>
+                </div>
+            </div>
+            <div class="tutorial-nav">
+                <button id="prev-step" class="btn-secondary">Назад</button>
+                <span id="step-counter">Шаг 1 из 3</span>
+                <button id="next-step" class="btn-primary">Далее</button>
+                <button id="skip-tutorial" class="btn-secondary" style="display: none;">Всё понятно!</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="brief-selection-modal" class="modal">
+        <div class="modal-content">
+            <h3>Выберите тип кампании</h3>
+            <div class="brief-options">
+                <div class="brief-option" data-brief="traffic">
+                    <h4>Трафик на сайт</h4>
+                    <p>Кампания направлена на генерацию трафика на сайт. Целевые показатели: 2 000 000 сеансов при бюджете 15 000 000 руб.</p>
+                </div>
+                <div class="brief-option" data-brief="reach">
+                    <h4>Максимальный охват</h4>
+                    <p>Кампания направлена на максимальный охват целевой аудитории. Целевые показатели: 20 000 000 охват при бюджете 15 000 000 руб.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="success-modal" class="modal">
+        <div class="modal-content success-content">
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <h2>Поздравляем!</h2>
+            <p>Вы успешно собрали медиаплан!</p>
+            <div class="celebration-animation">
+                <i class="fas fa-trophy"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-medal"></i>
+            </div>
+            <button id="close-success-modal" class="btn-primary">Закрыть</button>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <div class="game-header">
+            <div class="logos">
+                <img src="https://news.sfu-kras.ru/files/images/1280px-vtb_logo_2018.svg_.png" alt="VTB" class="logo vtb">
+                <h1>Media Plan Builder</h1>
+                <img src="https://static.tildacdn.com/tild3038-6237-4636-b839-643662626137/MIG_logo.svg" alt="MIG" class="logo mig">
+            </div>
+            <div class="budget-progress-container">
+                <div class="budget-progress"></div>
+                <div class="budget-text">Бюджет: 0 / 15 000 000 ₽</div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="tasks-section">
+                <div class="brief-section">
+                    <h3>Бриф</h3>
+                    <p id="brief-description"></p>
+                </div>
+                <div id="tasks-container" class="tab-content active"></div>
+                <div class="task-actions">
+                    <button id="check-task" class="btn-primary oval-btn check-btn">
+                        <i class="fas fa-paper-plane"></i> Отправить на согласование
+                    </button>
+                    <button id="reset-plan" class="btn-secondary oval-btn">Очистить медиаплан</button>
+                    <button id="show-stats-info" class="btn-secondary oval-btn">
+                        <i class="fas fa-info-circle"></i> Термины
+                    </button>
+                </div>
+            </div>
+            
+            <div class="workspace">
+                <div class="mediaplan-container">
+                    <div class="mediaplan with-bg-image" id="mediaplan">
+                        <div class="section-header">
+                            <h3>Ваш медиаплан</h3>
+                        </div>
+                        <div class="empty-drop">Перетащите площадки сюда</div>
+                    </div>
+                </div>
+                
+                <div class="metrics-container">
+                    <div class="metrics-section">
+                        <h4>Ключевые показатели</h4>
+                        <div class="metrics-grid" id="key-metrics"></div>
+                    </div>
+                    <div class="metrics-section">
+                        <h4>Ценовые показатели</h4>
+                        <div class="metrics-grid" id="price-metrics"></div>
+                    </div>
+                    <div class="metrics-section">
+                        <h4>Пост-клик показатели</h4>
+                        <div class="metrics-grid" id="postclick-metrics"></div>
+                    </div>
+                </div>
+                
+                <div class="platforms-container">
+                    <div class="platforms-list" id="platforms-list">
+                        <div class="section-header">
+                            <h3>Доступные площадки</h3>
+                        </div>
+                        <div id="platforms-content" class="platforms-grid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="warning-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="warning-text"></p>
+        </div>
+    </div>
+
+    <div id="platform-info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="platform-info-title"></h3>
+            <div id="platform-info-content"></div>
+            <div id="platform-format-example"></div>
+        </div>
+    </div>
+
+    <div id="stats-info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Объяснение терминов</h3>
+            <div id="stats-info-content">
+                <p><strong>CPM (Cost Per Mille)</strong> - стоимость 1000 показов рекламы. Рассчитывается как (общий бюджет / общие показы) * 1000.</p>
+                <p><strong>CPC (Cost Per Click)</strong> - стоимость одного клика. Рассчитывается как общий бюджет / общее количество кликов.</p>
+                <p><strong>CPT (Cost Per Thousand)</strong> - стоимость 1000 единиц охвата. Рассчитывается как (общий бюджет / охват) * 1000.</p>
+                <p><strong>CTR (Click Through Rate)</strong> - отношение числа кликов к показам. Показывает эффективность рекламы.</p>
+                <p><strong>BR (Bounce Rate)</strong> - процент пользователей, покинувших сайт после первого просмотра.</p>
+                <p><strong>Reach</strong> - уникальный охват аудитории, количество уникальных пользователей.</p>
+                <p><strong>Frequency</strong> - средняя частота показа рекламы одному пользователю. Рассчитывается как общие показы / охват.</p>
+                <p><strong>VTR (View Through Rate)</strong> - процент просмотров видео до конца.</p>
+                <p><strong>CR (Conversion Rate)</strong> - процент конверсий от общего числа сеансов.</p>
+                <p><strong>CPVisit (Cost Per Visit)</strong> - стоимость одного посещения сайта.</p>
+                <p><strong>CPA (Cost Per Action)</strong> - стоимость одного целевого действия.</p>
+                <p><strong>Impressions</strong> - общее количество показов рекламы.</p>
+                <p><strong>Clicks</strong> - общее количество кликов по рекламе.</p>
+                <p><strong>Sessions</strong> - количество сеансов на сайте после клика.</p>
+                <p><strong>Conversions</strong> - количество целевых действий (конверсий).</p>
+                <button id="understand-btn" class="btn-primary">Понятно</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="new-task-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Новое требование</h3>
+            <div id="new-task-content"></div>
+            <button id="close-task-modal" class="btn-primary">Закрыть</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
