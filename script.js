@@ -768,8 +768,8 @@ const briefs = {
             },
             { 
                 id: 6,
-                description: "Конверсии ≥ 50 000", 
-                condition: (stats) => stats.totalConversions >= 50000,
+                description: "Конверсии ≥ 10 000", 
+                condition: (stats) => stats.totalConversions >= 10000,
                 icon: "fas fa-bullseye",
                 hint: "Коллеги, мы посмотрели медиаплан и необходимо внести следующие доработки: увеличьте количество конверсий, выбирая площадки с высоким CR (например, Яндекс.Поиск - CR 6.0%, Forbes.ru - 6.5%)",
                 metrics: ["totalConversions"]
