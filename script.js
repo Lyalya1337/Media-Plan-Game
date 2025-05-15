@@ -31,7 +31,7 @@ const platforms = [
         icon: "fas fa-tv", 
         budgetLimit: 6000000,
         description: "Видеореклама на SmartTV через Digital Alliance.",
-        formatExample: "https://github.com/dbusurin/Media-Plan-Game/blob/main/DA_C%D0%BC%D0%B0%D1%80%D1%82%20%D1%82%D0%B2.jpg?raw=true"
+        formatExample: "https://github.com/dbusurin/Media-Plan-Game/blob/main/DA_C%D0%BC%D0%B0%D1%80%D1%82%20%D1%82%D0%B2.JPG?raw=true"
     },
     { 
         id: 2, 
@@ -48,7 +48,7 @@ const platforms = [
         icon: "fas fa-tv", 
         budgetLimit: 5500000,
         description: "Видеореклама на SmartTV в сети GPM (ТНТ, ТНТ4, Пятница, ТВ-3, 2х2, Суббота, МатчТВ).",
-        formatExample: "https://downloader.disk.yandex.ru/preview/b07fc2fff0da1ddb9af2828480009fef1abc0195e6b89c3fee5baa07ed951d95/6825d7c1/ErVpWWJNTPDsxIuLc8-YP-JIBF9ajnhsnR8AthO-dILPcwZZNcK6_yeuQAPEiwyZiLvaZiqpq09RN4cci4YIhw%3D%3D?uid=0&filename=GPM_OLV_%D0%92%D0%A2%D0%91_%D0%A1%D0%9C%D0%91_%D0%A4%D0%A0%D0%9A_%D0%9F%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%B5%D1%80_1%D0%9F%D0%A0.jpeg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v3&size=1920x912"
+        formatExample: "https://downloader.disk.yandex.ru/preview/b07fc2fff0da1ddb9af2828480009fef1abc0195e6b89c3fee5baa07ed951d95/6825d7c1/ErVpWWJNTPDsxIuLc8-YP-JIBF9ajnhsnR8AthO-dILPcwZZNcK6_yeuQAPEiwyZiLvaZiqpq09RN4cci4YIhw%3D%3D?uid=0&filename=GPM_OLV_%D0%92%D0%A2%D0%91_%D0%A1%D0%9C%D0%91_%D0%A4%D0%A0%D0%9A_%D0%9F%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%B5%D1%80_1%D0%9F%D0%A0.JPEG&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v3&size=1920x912"
     },
     { 
         id: 3, 
