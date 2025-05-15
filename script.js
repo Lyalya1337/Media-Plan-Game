@@ -31,7 +31,7 @@ const platforms = [
         icon: "fas fa-tv", 
         budgetLimit: 6000000,
         description: "Видеореклама на SmartTV через Digital Alliance.",
-        formatExample: "https://github.com/dbusurin/Media-Plan-Game/blob/main/DA_C%D0%BC%D0%B0%D1%80%D1%82%20%D1%82%D0%B2.JPG?raw=true"
+        formatExample: "https://raw.githubusercontent.com/dbusurin/Media-Plan-Game/refs/heads/main/DA_C%D0%BC%D0%B0%D1%80%D1%82%20%D1%82%D0%B2.jpg"
     },
     { 
         id: 2, 
