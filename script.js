@@ -14,7 +14,7 @@ const platforms = [
         icon: "fas fa-video", 
         budgetLimit: 3000000,
         description: "Видеореклама на платформе PBD с широким охватом аудитории и возможностью создания кастомных сегментов.",
-        formatExample: "https://disk.yandex.ru/d/KCqOpy9878sE_Q/%D0%9F%D0%91%D0%94_OLV_%D0%92%D0%A2%D0%91_%D0%A1%D0%9C%D0%91_%D0%A4%D0%A0%D0%9A1_%D0%94%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BC%D0%B0%D0%BB%D0%BE%D0%B3%D0%BE%20%D0%B8%20%D1%81%D1%80%D0%B5%D0%B4%D0%BD%D0%B5%D0%B3%D0%BE%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0_Desktop_In-stream_%D0%BC%D0%B0%D1%80%D1%82.png"
+        formatExample: "https://downloader.disk.yandex.ru/preview/ee9a68ed587aa1195270095f5d7b18a7d4ade1261c9b677b4b326dfa4e9554ba/6825d7c1/Jmg0nweWjKXrafv3B_0gBZR5_CCLL0ZtSinPsaIJTX7HITBqLaE4rw8f04awKexnztoVz06trnk7o3SuUvNq_g%3D%3D?uid=0&filename=%D0%9F%D0%91%D0%94_OLV_%D0%92%D0%A2%D0%91_%D0%A1%D0%9C%D0%91_%D0%A4%D0%A0%D0%9A1_%D0%94%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BC%D0%B0%D0%BB%D0%BE%D0%B3%D0%BE%20%D0%B8%20%D1%81%D1%80%D0%B5%D0%B4%D0%BD%D0%B5%D0%B3%D0%BE%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0_Desktop_In-stream_%D0%BC%D0%B0%D1%80%D1%82.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v3&size=1920x912"
     },
     { 
         id: 1, 
@@ -31,7 +31,7 @@ const platforms = [
         icon: "fas fa-tv", 
         budgetLimit: 6000000,
         description: "Видеореклама на SmartTV через Digital Alliance.",
-        formatExample: "https://disk.yandex.ru/d/KCqOpy9878sE_Q/DA_C%D0%BC%D0%B0%D1%80%D1%82%20%D1%82%D0%B2.jpg"
+        formatExample: "https://downloader.disk.yandex.ru/preview/626aea01c0886a8647ce7fc727edd62fc0700532a40f8e6086f921774ddc5078/6825d7c1/0LjksPcx7Nbps0q9ekQw1CMPx78_RXSevhyaHwfLSKquSC4ehPg4L3XilUlODllNFSvrCvRkZVX5ZSPG3iQ4CQ%3D%3D?uid=0&filename=DA_C%D0%BC%D0%B0%D1%80%D1%82%20%D1%82%D0%B2.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v3&size=1920x912"
     },
     { 
         id: 2, 
@@ -48,7 +48,7 @@ const platforms = [
         icon: "fas fa-tv", 
         budgetLimit: 5500000,
         description: "Видеореклама на SmartTV в сети GPM (ТНТ, ТНТ4, Пятница, ТВ-3, 2х2, Суббота, МатчТВ).",
-        formatExample: "https://disk.yandex.ru/d/KCqOpy9878sE_Q/GPM_OLV_%D0%92%D0%A2%D0%91_%D0%A1%D0%9C%D0%91_%D0%A4%D0%A0%D0%9A_%D0%9F%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%B5%D1%80_1%D0%9F%D0%A0.jpeg"
+        formatExample: "https://downloader.disk.yandex.ru/preview/b07fc2fff0da1ddb9af2828480009fef1abc0195e6b89c3fee5baa07ed951d95/6825d7c1/ErVpWWJNTPDsxIuLc8-YP-JIBF9ajnhsnR8AthO-dILPcwZZNcK6_yeuQAPEiwyZiLvaZiqpq09RN4cci4YIhw%3D%3D?uid=0&filename=GPM_OLV_%D0%92%D0%A2%D0%91_%D0%A1%D0%9C%D0%91_%D0%A4%D0%A0%D0%9A_%D0%9F%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%B5%D1%80_1%D0%9F%D0%A0.jpeg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v3&size=1920x912"
     },
     { 
         id: 3, 
@@ -65,7 +65,7 @@ const platforms = [
         icon: "fab fa-youtube", 
         budgetLimit: 5000000,
         description: "Видеореклама на платформе Яндекс.Видео.",
-        formatExample: "https://disk.yandex.ru/d/KCqOpy9878sE_Q/%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81_OLV_%D0%B4%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D1%8B_%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE_%D0%BC%D0%B0%D1%80%D1%82.jpg"
+        formatExample: "https://downloader.disk.yandex.ru/preview/9dcc11df7719e5ee37cfecb66dbe942812c7444c209bab0ebc3e896a5e9b45ec/6825d7c1/-jawcspzAwjRYaz9WNw9j4ujm7Vbe5tx7nPOPPiZ3WwP4S341gK1N56og37UhXRNegTfrEkeOoc6UiO3BOHOlg%3D%3D?uid=0&filename=%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81_OLV_%D0%B4%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D1%8B_%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE_%D0%BC%D0%B0%D1%80%D1%82.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v3&size=1920x912"
     },
     { 
         id: 4, 
@@ -82,7 +82,7 @@ const platforms = [
         icon: "fab fa-vk", 
         budgetLimit: 4500000,
         description: "Видеореклама в социальной сети ВКонтакте.",
-        formatExample: "https://disk.yandex.ru/d/KCqOpy9878sE_Q/VK_%D0%9F%D1%80%D0%B5%D1%80%D0%BE%D0%BB%D0%BB.png"
+        formatExample: "https://downloader.disk.yandex.ru/preview/956e93c4aeb92f8b812b650fc21fb49ec6c6d57ff29e7c227a9403de54c1cd1e/6825d7c1/iBEoV69gsMUXat2HdRTZNp1rcSpODt1qFCHdugziplWzYO_TIwzZ9zIaJ3klEiIJq0N1La23QNB1Ojv3f50VLA%3D%3D?uid=0&filename=VK_post.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v3&size=1920x912"
     },
     { 
         id: 5, 
@@ -99,7 +99,7 @@ const platforms = [
         icon: "fas fa-tv", 
         budgetLimit: 6000000,
         description: "Видеореклама на SmartTV через IVI.",
-        formatExample: "https://disk.yandex.ru/d/KCqOpy9878sE_Q/Ivi_olv%201.jpg"
+        formatExample: "https://downloader.disk.yandex.ru/preview/8756af8714edb316b94754e9c0d7e43ff40381de1cabee1a664f78acdc436727/6825d7c1/uCz2pL689Ewqer5nbVSZTVl3t0Wcpwcn9oXnIGSi3mW7s-kBFiywmJ6bjeKcnc3cALcfWd8Aa31luP8mlZGulg%3D%3D?uid=0&filename=Ivi_olv%201.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v3&size=1920x912"
     },
     { 
         id: 6, 
@@ -116,7 +116,7 @@ const platforms = [
         icon: "fas fa-ad", 
         budgetLimit: 4000000,
         description: "Различные форматы баннеров на платформе Avito.",
-        formatExample: "https://disk.yandex.ru/d/KCqOpy9878sE_Q/%D0%90%D0%B2%D0%B8%D1%82%D0%BE_%D0%9F%D1%80%D0%B5%D0%BC%D0%B8%D1%83%D0%BC_%D0%9D%D0%B5%D0%B1%D0%BE%D1%81%D0%BA%D1%80%D0%B5%D0%B1.png"
+        formatExample: "https://downloader.disk.yandex.ru/preview/94be33dcdedb7473644fa98398868afb4fe59e77e1b9a18463856b80995826a7/6825d7c1/kNJTLLLDekSc_rKUl-YOqY15XtYjCdkrSN9iX3O4aIA9FvrQcJF_OOiQxycOCRi9_qKNB0G1niTZ6WBwz6Cwyg%3D%3D?uid=0&filename=%D0%90%D0%B2%D0%B8%D1%82%D0%BE_%D0%9F%D1%80%D0%B5%D0%BC%D0%B8%D1%83%D0%BC_%D0%9D%D0%B5%D0%B1%D0%BE%D1%81%D0%BA%D1%80%D0%B5%D0%B1.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v3&size=1920x912"
     },
     { 
         id: 7, 
@@ -133,7 +133,7 @@ const platforms = [
         icon: "fas fa-money-bill-wave", 
         budgetLimit: 2000000,
         description: "Специальные баннерные предложения на Banki.ru.",
-        formatExample: "https://disk.yandex.ru/d/KCqOpy9878sE_Q/Banki_%D0%9F%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BC%D0%B5%D1%81%D1%8F%D1%86%D0%B0.png"
+        formatExample: "https://downloader.disk.yandex.ru/preview/3ae2ed81fb24ef7f6955551c16d3949443c1cf9805001c347ab1ee75e3f677f5/6825d7c1/Hmci0oBXNg-E10wjQsy9B7eEgA1C0Y7jodKudCrh-k1XjGfbv1jsz7G1dWeCZgBFyvhswa3ZkfAVEMp66a77hw%3D%3D?uid=0&filename=Banki_%D0%9F%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BC%D0%B5%D1%81%D1%8F%D1%86%D0%B0.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v3&size=1920x912"
     },
     { 
         id: 8, 
@@ -150,7 +150,7 @@ const platforms = [
         icon: "fas fa-ad", 
         budgetLimit: 3000000,
         description: "Премиум баннеры на платформе PBD.",
-        formatExample: "https://disk.yandex.ru/d/KCqOpy9878sE_Q/%D0%9F%D0%91%D0%94_%D0%B1%D0%B0%D0%BD%D0%BD%D0%B5%D1%80_%D0%92%D0%A2%D0%91_%D0%94%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BC%D0%B0%D0%BB%D0%BE%D0%B3%D0%BE%20%D0%B8%20%D1%81%D1%80%D0%B5%D0%B4%D0%BD%D0%B5%D0%B3%D0%BE%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0_%D0%B4%D0%B5%D1%81%D0%BA%D1%82%D0%BE%D0%BF_%D0%BC%D0%B0%D1%80%D1%82.png"
+        formatExample: "https://downloader.disk.yandex.ru/preview/8fcc2398b4c1e75135df63f09993f3d952014018bccae4cf3dd4b8ac180d45bb/6825d7c1/HtqlqCBNAti8PkngAQCzuQMNDXni_JvqvcyuhX7Te6t8jM8hktx7y6UqAaUDc_eG1_5_Rwkfkr9gDO-SKsLQ3Q%3D%3D?uid=0&filename=%D0%9F%D0%91%D0%94_%D0%B1%D0%B0%D0%BD%D0%BD%D0%B5%D1%80_%D0%92%D0%A2%D0%91_%D0%94%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BC%D0%B0%D0%BB%D0%BE%D0%B3%D0%BE%20%D0%B8%20%D1%81%D1%80%D0%B5%D0%B4%D0%BD%D0%B5%D0%B3%D0%BE%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0_%D0%B4%D0%B5%D1%81%D0%BA%D1%82%D0%BE%D0%BF_%D0%BC%D0%B0%D1%80%D1%82.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v3&size=1920x912"
     },
     { 
         id: 9, 
@@ -167,7 +167,7 @@ const platforms = [
         icon: "fab fa-yandex", 
         budgetLimit: 4000000,
         description: "Баннерная реклама в рекламной сети Яндекса.",
-        formatExample: "https://disk.yandex.ru/d/KCqOpy9878sE_Q/%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81_%D0%94%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D1%8B_%D0%91%D0%B0%D0%BD%D0%BD%D0%B5%D1%80_%D0%9C%D0%B0%D1%80%D1%82.jpg"
+        formatExample: "https://downloader.disk.yandex.ru/preview/637b7283fafed2c0d3f46077d2093c0250e295a14c433fc7382207f48e9fa3f5/6825d7c1/K5oEyqERfXrmKP-0T3zapw9mytLMsriXRrlqfnn9xSc3LqlrJILptQYInxaIuitUZRe3WVq48dwBf_773XwBmw%3D%3D?uid=0&filename=%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81_%D0%94%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D1%8B_%D0%91%D0%B0%D0%BD%D0%BD%D0%B5%D1%80_%D0%9C%D0%B0%D1%80%D1%82.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v3&size=1920x912"
     },
     { 
         id: 10, 
@@ -184,7 +184,7 @@ const platforms = [
         icon: "fas fa-newspaper", 
         budgetLimit: 4000000,
         description: "Брендированная реклама на РБК.",
-        formatExample: "https://disk.yandex.ru/d/KCqOpy9878sE_Q/%D0%A0%D0%91%D0%9A%20%D0%92%D0%A2%D0%91%202025%20%D0%A1%D0%9C%D0%91%20%D0%A4%D0%A0%D0%9A1%20%D0%94%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D1%8B%20100%D1%85400.jpg"
+        formatExample: "https://downloader.disk.yandex.ru/preview/fdc68ede2bd92d544531a6ecc7cd890a8ed31fe9d806068b2841e06e041e4bc3/6825d7c1/sLYT-8bxQWyw47o9Ay9kSbV3IFCD_MGMmbmkh-APxEY5cb2FL1GrmcF2ZqsPrBWoai2TjXPvjXLzwpEnkTNaug%3D%3D?uid=0&filename=%D0%A0%D0%91%D0%9A%20%D0%92%D0%A2%D0%91%202025%20%D0%A1%D0%9C%D0%91%20%D0%A4%D0%A0%D0%9A1%20%D0%94%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D1%8B%20100%D1%85500.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v3&size=1920x912"
     },
     { 
         id: 11, 
@@ -235,7 +235,7 @@ const platforms = [
         icon: "fas fa-newspaper", 
         budgetLimit: 3500000,
         description: "Брендированная реклама на Kommersant.ru.",
-        formatExample: "https://disk.yandex.ru/d/KCqOpy9878sE_Q/%D0%9A%D0%BE%D0%BC%D0%BC%D0%B5%D1%80%D1%81%20%D0%92%D0%A2%D0%91%20%D0%B4%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%20%D0%B4%D0%BB%D1%8F%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0%20970%20250%20%D1%82%D0%BE%D0%BF.jpg"
+        formatExample: "https://downloader.disk.yandex.ru/preview/2164d012d568ac052e3b92d0eba4882c8a004b2c921dfc675b18ff8a189f9d6c/6825d7c1/MtWNZe47viJSfrGvB_VL4OMYk0Q7JwMHOkAYKLtLZkQMKM_MXCDb_egANls5nnVrInY4w5LqK8TZQP1RsF-7eQ%3D%3D?uid=0&filename=%D0%9A%D0%BE%D0%BC%D0%BC%D0%B5%D1%80%D1%81%20%D0%92%D0%A2%D0%91%20%D0%B4%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%20%D0%B4%D0%BB%D1%8F%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0%20970%20250%20%D1%82%D0%BE%D0%BF.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v3&size=1920x912"
     },
     { 
         id: 14, 
@@ -252,7 +252,7 @@ const platforms = [
         icon: "fas fa-ad", 
         budgetLimit: 2500000,
         description: "Баннерная реклама различных форматов на платформе AdSpend.",
-        formatExample: "https://disk.yandex.ru/d/KCqOpy9878sE_Q/%D0%90%D0%B4%D1%81%D0%BF%D0%B5%D0%BD%D0%B4%20%D0%94%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BC%D0%B0%D0%BB%D0%BE%D0%B3%D0%BE%20%D0%B8%20%D1%81%D1%80%D0%B5%D0%B4%D0%BD%D0%B5%D0%B3%D0%BE%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0%20%D0%B1%D0%B0%D0%BD%D0%BD%D0%B5%D1%80%D1%8B%200104.jpg"
+        formatExample: "https://downloader.disk.yandex.ru/preview/fce39cd4bffc51def3b1fe80da3b6086a03376c4cda06b534424a7c99996c51c/6825d7c1/s5rA6EGU7cX0stsYe2KT9MXXUmlC-xQgwIYloKpecaQ169NhnqL8wuBa-Qk5gaJsu55IFLxq2pAYK4RbnNrGtA%3D%3D?uid=0&filename=%D0%90%D0%B4%D1%81%D0%BF%D0%B5%D0%BD%D0%B4%20%D0%94%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BC%D0%B0%D0%BB%D0%BE%D0%B3%D0%BE%20%D0%B8%20%D1%81%D1%80%D0%B5%D0%B4%D0%BD%D0%B5%D0%B3%D0%BE%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0%20%D0%B1%D0%B0%D0%BD%D0%BD%D0%B5%D1%80%D1%8B%200104.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v3&size=1920x912"
     },
     { 
         id: 15, 
@@ -269,7 +269,7 @@ const platforms = [
         icon: "fab fa-vk", 
         budgetLimit: 5000000,
         description: "Промопосты в социальной сети ВКонтакте.",
-        formatExample: "https://disk.yandex.ru/d/KCqOpy9878sE_Q/VK_post.jpg"
+        formatExample: "https://downloader.disk.yandex.ru/preview/956e93c4aeb92f8b812b650fc21fb49ec6c6d57ff29e7c227a9403de54c1cd1e/6825d7c1/iBEoV69gsMUXat2HdRTZNp1rcSpODt1qFCHdugziplWzYO_TIwzZ9zIaJ3klEiIJq0N1La23QNB1Ojv3f50VLA%3D%3D?uid=0&filename=VK_post.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v3&size=1920x912"
     }, 
     { 
         id: 16, 
@@ -286,7 +286,7 @@ const platforms = [
         icon: "fab fa-odnoklassniki", 
         budgetLimit: 3000000,
         description: "Медийные баннеры в ленте OK.",
-        formatExample: "https://disk.yandex.ru/d/KCqOpy9878sE_Q/OK_%D0%B1%D0%B0%D0%BD%D0%BD%D0%B5%D1%80_%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C.jpg"
+        formatExample: "https://downloader.disk.yandex.ru/preview/72f4db2af055021f63383197e85c89a0a8ca84fa2b4fe3f2b5f1dbbc815ba46d/6825d7c1/sLYT-8bxQWyw47o9Ay9kScKE-eS_4ENEYJe1z64eGIkANuurgfLzC1V4UiLzgg6Z9TExaXQ1MjI9XAMi9Fn4Ew%3D%3D?uid=0&filename=OK_%D0%B1%D0%B0%D0%BD%D0%BD%D0%B5%D1%80_%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8C.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v3&size=1920x912"
     },
     { 
         id: 17, 
@@ -303,7 +303,7 @@ const platforms = [
         icon: "fas fa-shopping-bag", 
         budgetLimit: 4000000,
         description: "Баннерная реклама на Wildberries.",
-        formatExample: "https://disk.yandex.ru/d/KCqOpy9878sE_Q/WB_%D0%B1%D0%B0%D0%BD%D0%BD%D0%B5%D1%80%20%D0%BD%D0%B0%20%D0%B3%D0%B0%D0%BB%D0%B2%D0%BD%D0%BE%D0%B9.jpeg"
+        formatExample: "https://downloader.disk.yandex.ru/preview/602e5866aec68b25a703edef4b60daca1a5896d40e963ed184b62b2e55315a18/6825d7c1/9PcUL7CrjRsJCQf_2lPVFCFZEn8GDhNUsiSmHltDb9PjK51U1u8-3T0frMjGcxxGola6sBTL81oruQnev18YBg%3D%3D?uid=0&filename=WB_%D0%B1%D0%B0%D0%BD%D0%BD%D0%B5%D1%80%20%D0%BD%D0%B0%20%D0%B3%D0%B0%D0%BB%D0%B2%D0%BD%D0%BE%D0%B9.jpeg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v3&size=1920x912"
     },
     { 
         id: 18, 
@@ -320,7 +320,7 @@ const platforms = [
         icon: "fas fa-shopping-cart", 
         budgetLimit: 4500000,
         description: "Баннерная реклама на главной странице OZON.",
-        formatExample: "https://disk.yandex.ru/d/KCqOpy9878sE_Q/Ozon_banners_%D0%94%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D1%8B_%D0%B4%D0%BB%D1%8F_%D0%BC%D0%B0%D0%BB%D0%BE%D0%B3%D0%BE_%D0%B8_%D1%81%D1%80%D0%B5%D0%B4%D0%BD%D0%B5%D0%B3%D0%BE_%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0_%D0%BC%D0%BE%D0%B1.jpg"
+        formatExample: "https://downloader.disk.yandex.ru/preview/c1914573278277e161dfcb36a7352bf199e1a27b2749c145af70d63ded01ffb5/6825d7c1/EbFxLK-Vwo0YHgZkGiH56xLL3PXg7xlfDjmHsCLITz37AKDUYCo8Rxx0EDDn3-JrpWygwVKo64IqJIoVWCgT0w%3D%3D?uid=0&filename=Ozon_banners_%D0%94%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D1%8B_%D0%B4%D0%BB%D1%8F_%D0%BC%D0%B0%D0%BB%D0%BE%D0%B3%D0%BE_%D0%B8_%D1%81%D1%80%D0%B5%D0%B4%D0%BD%D0%B5%D0%B3%D0%BE_%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0_%D0%BC%D0%BE%D0%B1.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v3&size=1920x912"
     }
 ];
 
